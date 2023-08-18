@@ -36,11 +36,15 @@ namespace Hazel {
 		virtual const char* GetName() const = 0;
 		virtual int GetCategoryFlags() const = 0;
 		virtual std::string ToString() const { return GetName(); }
+
+		inline bool IsInCategory(EventCategory category) {
+			return GetCategoryFlags() & category;
+		}
+	protected:
+		bool m_Handled = false;
+
 	};
 
-	inline bool IsInCategory(EventCategory category) {
-		return GetCategoryFlags() & category;
-	}
 
 
 }
