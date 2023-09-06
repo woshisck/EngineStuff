@@ -1,13 +1,26 @@
-struct Functions
-{
-  float3 OrangeBright(float3 c)
-  {
-      return c * float3(1, .7, 0);
-  }
-  float3 Out(float3 InColor)
-  {
-    return OrangeBright(InColor);
+// struct Functions
+// {
+//   float3 OrangeBright(float3 c)
+//   {
+//       return c * float3(1, .7, 0);
+//   }
+//   float3 Out(float3 InColor)
+//   {
+//     return OrangeBright(InColor);
+//   }
+// };
+// Functions f;
+// return f.Out(InColor);
+
+struct oneDGaussian{
+  float Calculate1DGaussian(float x){
+    return exp(-0.5 * pow(3.141 * (x), 2));
   }
 };
-Functions f;
-return f.Out(InColor);
+oneDGaussian oneGaussian;
+return oneGaussian.Calculate1DGaussian(x);
+
+
+// float2 myUV = ViewportUVToSceneTextureUV(UV, 14);
+// return float3(myUV, 1);
+// return  SceneTextureLookup(ViewportUVToSceneTextureUV(UV,14),14,true);
