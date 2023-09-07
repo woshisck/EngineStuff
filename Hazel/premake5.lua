@@ -23,6 +23,7 @@ project "Hazel"
     }
 
     includedirs{
+        "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include;"
     }
 
@@ -30,7 +31,8 @@ project "Hazel"
     filter "system:windows"
         cppdialect "C++17"
         staticruntime "On"
-        systemversion "10.0"
+        systemversion "10.0.17134.0"
+		systemversion "latest"
 
         defines{
             "HZ_PLATFORM_WINDOWS",
@@ -85,7 +87,8 @@ project "Sandbox"
     filter "system:windows"
         cppdialect "C++17"
         staticruntime "On"
-        systemversion "10.0"
+        systemversion "10.0.17134.0"
+        systemversion "latest"
 
         defines{
             "HZ_PLATFORM_WINDOWS"

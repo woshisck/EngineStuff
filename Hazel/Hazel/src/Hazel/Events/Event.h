@@ -9,6 +9,9 @@
 
 namespace Hazel {
 
+	
+	//need to have buffer in the future, now it's just happend immediantely
+
 	enum class EventType {
 		None = 0,
 		WindowClose,WindowResize, WindowFocus, WindowLostFocus,WindowMoved,
